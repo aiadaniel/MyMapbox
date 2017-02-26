@@ -1,0 +1,23 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.amazonaws:aws-devicefarm-gradle-plugin:1.2'
+        classpath 'com.stanfy.spoon:spoon-gradle-plugin:1.2.1'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.14.1'
+}
+
+apply from: rootProject.file('dependencies.gradle')
+
